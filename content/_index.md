@@ -44,7 +44,7 @@ Thomas J. Fan
 
 - PR: Pull request
 - Reviewer: Person reviewing the pull request
-- Contributor: Author of the pull request
+- Author: Person who create the pull request
 
 
 {{% /g %}}
