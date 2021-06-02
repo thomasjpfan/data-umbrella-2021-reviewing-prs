@@ -44,7 +44,8 @@ Thomas J. Fan
 
 - PR: Pull request
 - Reviewer: Person reviewing the pull request
-- Author: Person who create the pull request
+- Contributor: Person who create the pull request
+- Merged: Pull request is included into the main branch
 
 
 {{% /g %}}
@@ -137,6 +138,10 @@ Thomas J. Fan
 
 ---
 
+{{< figure src="images/ci-checks.png" width="100%" >}}
+
+---
+
 # Browsing code in GitHub
 
 - `t`: Activate the file finder
@@ -145,7 +150,13 @@ Thomas J. Fan
 
 ---
 
-{{< figure src="images/ci-checks.png" width="100%" >}}
+# GitHub CLI
+
+- [GitHub On The Command Line](https://cli.github.com)
+
+```bash
+gh pr checkout 20165
+```
 
 ---
 
@@ -186,7 +197,7 @@ Thomas J. Fan
 {{% grid %}}
 {{% g 1 success %}}
 ## ✅
-This would cause a performance issue. We can cache the results and use it again for sequential calls. What do you think?
+This would cause a performance regression. We can cache the results and use it again for sequential calls. What do you think?
 {{% /g %}}
 
 {{% g 1 alert %}}
@@ -229,12 +240,6 @@ We have similar logic in multiple places in this PR. Can we refactor this into i
 Please refactor this into its own function.
 {{% /g %}}
 {{% /grid %}}
-
----
-
-# Explain why code should be changed
-
-{{< figure src="images/kwargs-explain.png" width="100%">}}
 
 ---
 
@@ -418,9 +423,11 @@ Thank you for the PR @thomasjpfan!
 ---
 
 ## Does the description describe why the change is being made?
-- Matches the contents of the PR
 
 {{< figure src="images/describe-pr.png" width="100%" >}}
+
+- Description matches the contents of the PR
+- Links to information issues related to PR
 
 ---
 
@@ -494,7 +501,7 @@ Thank you for the PR @thomasjpfan!
 
 ## Was a core component changed?
 - Needs to be discussed
-- Extra scrutiny
+- Regressions?
 
 {{% /g %}}
 {{% g 1 %}}
@@ -507,6 +514,7 @@ Thank you for the PR @thomasjpfan!
 ---
 
 ## Does the change maintain backwards compatibility?
+- Deprecation?
 
 {{< figure src="images/puzzle-bc.jpg" width="70%" >}}
 
@@ -515,7 +523,7 @@ Thank you for the PR @thomasjpfan!
 {{% grid middle %}}
 {{% g 1 %}}
 
-## Could the change be more generally applicable elsewhere in the codebase?
+### Could the change be more generally applicable elsewhere in the codebase?
 - Small changes: encourage the author to make the changes
 - Big changes: open another issue to track it
 
@@ -633,9 +641,11 @@ Thank you for the PR @thomasjpfan!
 
 ## Are there tests?
 
-- Help tell us if we break something in the future
-- Help tell us if the PR is correct
-- Bug fixes require non-regression tests: failed before and no longer fails
+- Prevents breaking something in the future
+- Checks that the PR is correct
+- Bug fixes require non-regression tests
+    - Failed on main branch
+    - Does not fail with the PR
 
 {{% /g %}}
 {{% g 1 %}}
