@@ -42,10 +42,10 @@ Thomas J. Fan
 
 # Glossary
 
-- PR: Pull request
-- Reviewer: Person reviewing the pull request
-- Contributor: Person who create the pull request
-- Merged: Pull request is included into the main branch
+- **PR**: Pull request
+- **Reviewer**: Person reviewing the pull request
+- **Contributor**: Person who create the pull request
+- **Merged**: Pull request is included into the main branch
 
 
 {{% /g %}}
@@ -437,14 +437,26 @@ Thank you for the PR @thomasjpfan!
 
 ---
 
+{{% grid middle %}}
+{{% g 1 %}}
+
 ## Do we want this new feature? 🤔
 - Make sure that the team and the community wants to build the feature
 - Every line of code we add means more code size and more maintenance
+
+{{% /g %}}
+{{% g 1 %}}
+
+{{< figure src="images/maint.jpg" width="60%" >}}
+
+{{% /g %}}
+{{% /grid %}}
 
 ---
 
 ## Was unrelated code changed? 🛠
 - Only include files that are directly related to the change
+- If you use VSCode:
 
 ```json
 {
@@ -514,7 +526,7 @@ Thank you for the PR @thomasjpfan!
 ---
 
 ## Does the change maintain backwards compatibility?
-- Deprecation?
+- **Deprecation?**
 
 {{< figure src="images/puzzle-bc.jpg" width="70%" >}}
 
@@ -553,6 +565,9 @@ Thank you for the PR @thomasjpfan!
 
 ---
 
+{{% grid middle %}}
+{{% g 1 %}}
+
 ## Performance optimizations
 #### **Require Benchmarks**
 - [memory-profiler](https://pypi.org/project/memory-profiler/)
@@ -560,6 +575,14 @@ Thank you for the PR @thomasjpfan!
 - [filprofiler](https://github.com/pythonspeed/filprofiler)
 - [py-spy](https://github.com/benfred/py-spy)
 - [viztracer](https://viztracer.readthedocs.io)
+
+{{% /g %}}
+{{% g 1 %}}
+
+{{< figure src="images/bench.jpg" width="100%" >}}
+
+{{% /g %}}
+{{% /grid %}}
 
 ---
 
@@ -658,10 +681,23 @@ Thank you for the PR @thomasjpfan!
 
 ---
 
+{{% grid middle %}}
+{{% g 2 %}}
+
 ## When is it okay not have test? 🧪
 - Documentation
-- Performance optimizations
-- Memory optimizations
+- Optimizations
+    - Performance
+    - Memory
+    - Make sure existing test pass
+
+{{% /g %}}
+{{% g 1 %}}
+
+{{< figure src="images/bench.jpg" width="100%" >}}
+
+{{% /g %}}
+{{% /grid %}}
 
 ---
 
@@ -711,27 +747,9 @@ Thank you for the PR @thomasjpfan!
 
 ---
 
-{{% grid middle %}}
+# It is okay to make mistakes
 
-{{< g 1 >}}
-
-# Why code review? 🔎 💻
-
-{{% grid middle %}}
-
-{{% g 1 %}}
-{{< figure src="images/why-review.jpg" height="500px" >}}
-{{% /g %}}
-
-{{% g 1 %}}
-
-- Correctness
-- Maintainability
-- Knowledge sharing
-
-{{% /g %}}
-
-{{% /grid %}}
+{{< figure src="images/mistakes.jpg" width="70%" >}}
 
 ---
 
